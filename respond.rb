@@ -11,9 +11,7 @@ get '/' do
   content_type 'text/xml'
   Twilio::TwiML::Response.new do |r|
     r.Say 'Hello, calling someone'
-    r.Gather finishOnKey: '*' do |g|
-      r.Dial callerId: ENV['NAT']
-    end
+    r.Dial callerId: ENV['NAT']
   end.text
 end
 
