@@ -31,5 +31,6 @@ get '/connect-a-call' do
       r.Dial ENV['DAN']
     end
     r.Say 'The call failed or the other party hung up.'
+    r.Say 'You may hang up now and call again to speak to another person.'
   end.text
 end
