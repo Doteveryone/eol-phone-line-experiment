@@ -24,6 +24,7 @@ get '/connect-a-call' do
 
   redirect '/' unless (params['Digits'] == '1' or params['Digits'] == '2')
 
+  puts params['Digits']
   Twilio::TwiML::Response.new do |r|
     if params['Digits'] == '1'
       r.Dial ENV['NAT']
