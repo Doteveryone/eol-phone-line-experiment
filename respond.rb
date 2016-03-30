@@ -31,6 +31,7 @@ get '/connect-a-call' do
       r.Dial ENV['DAN']
     end
     r.Say 'The call failed or the other party hung up.'
-    r.Say 'You may hang up now and call again to speak to another person.'
+    r.Say 'You may hang up now or stay on the line to hear the options again.'
+    r.Redirect 'http://call-scheduler.herokuapp.com/'
   end.text
 end
