@@ -9,9 +9,9 @@ Dotenv.load
 
 get '/' do
   Twilio::TwiML::Response.new do |r|
-    r.Say 'Hello, calling Dan'
+    r.Say 'Hello, calling someone'
     r.Gather finishOnKey: '*' do |g|
-      r.Dial callerId: ENV['DAN']
+      r.Dial callerId: ENV['NAT']
     end
   end.text
 end
