@@ -2,6 +2,8 @@
 
 This is an example program that connects people over the phone.
 
+This app uses Twilio’s Ruby gem to generate TwiML. It runs on Sinatra, and is _not_ backed by a database.
+
 ## Installation
 
 Clone the repository, and install the required gems:
