@@ -26,9 +26,9 @@ get '/connect-a-call' do
 
   Twilio::TwiML::Response.new do |r|
     if params['Digits'] == '1'
-      r.Dial ENV['NAT']
+      r.Dial ENV['NAT'], callerId: '+441995262055'
     elsif params['Digits'] == '2'
-      r.Dial ENV['DAN']
+      r.Dial ENV['DAN'], callerId: '+441995262055'
     end
     r.Say 'The call failed or the other party hung up.'
     r.Say 'You may hang up now or stay on the line to hear the options again.'
